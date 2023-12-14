@@ -1,0 +1,77 @@
+.container {
+  background-color: rgb(0, 0, 0, 0.7);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popup {
+  background-color: white;
+  color: black;
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr/1fr 1fr;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.popup * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem;
+}
+.new {
+  grid-column: span 2;
+  justify-content: flex-start;
+  margin-left: 1.5rem;
+}
+.span {
+  justify-content: flex-start;
+  margin-left: 1.5rem;
+}
+.input {
+  background-color: white;
+}
+.input input {
+  border-radius: 10px;
+  background-color: white;
+}
+.button {
+  justify-content: space-between;
+}
+.button button {
+  height: 1.2rem;
+  width: 1.2rem;
+  border-radius: 50%;
+}
+.purple {
+  background-color: #b38bfa;
+}
+.pink {
+  background-color: #ff79f2;
+}
+.sky {
+  background: #43e6fc;
+}
+.orange {
+  background: #f19576;
+}
+.blue {
+  background: #0047ff;
+}
+.violet {
+  background: #6691ff;
+}
+
+.create {
+  grid-column: span 2;
+  justify-content: flex-end;
+}
+.create button {
+  background: #001f8b;
+  height: 1.5rem;
+  width: 5rem;
+  border-radius: 1rem;
+}

@@ -1,0 +1,25 @@
+.item1 {
+  background-color: white;
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+}
+.item1 p {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.item1 button {
+  background-color: #16008b;
+  border-radius: 50%;
+  position: sticky;
+  width: 2.8rem;
+  height: 2.8rem;
+}
+.item1 button span {
+  height: 4rem;
+  width: 2rem;
+  background-color: #16008b;
+  font-size: 2rem;
+  font-weight: 700;
+  text-justify: center;
+}

@@ -1,0 +1,29 @@
+.item2 {
+  background-color: #dae5f5;
+  color: #292929;
+  font-weight: 500;
+  display: grid;
+  grid-template-rows: 4fr 1fr;
+  font-size: 1rem;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  align-items: center;
+  justify-content: center;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.Pocket {
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: #000000;
+}
+.footer p {
+  margin-bottom: 1rem;
+}

@@ -37,6 +37,7 @@
 .input input {
   border-radius: 10px;
   background-color: white;
+  color: black;
 }
 .button {
   justify-content: space-between;
@@ -74,4 +75,5 @@
   height: 1.5rem;
   width: 5rem;
   border-radius: 1rem;
+  margin-left: 4rem;
 }

@@ -4,14 +4,40 @@ import Styles from "/Users/lakshya_mangal/Desktop/cuvette/my-note/myNote/src/com
 function List(props) {
   let appear = props.appear;
   let dissapear = props.dissapear;
+  let notedata = props.notedata;
+  let showDisplay = props.showDisplay;
+  let groupName = props.groupName;
+  let setGroupName = props.setGroupName;
+  function handler(name) {
+    setGroupName(name);
+    showDisplay();
+  }
   return (
     // <div className={Styles.container}>
     <div className={Styles.item1}>
-      <p>Pocket Notes</p>
+      <div className={Styles.header}>
+        <p>
+          Pocket Notes
+          <button className={Styles.plus} onClick={appear}>
+            <span>+</span>
+          </button>
+        </p>
+      </div>
+
       <div className={Styles.notes}>
-        <button onClick={appear}>
-          <span>+</span>
-        </button>
+        <div className={Styles.scroll}>
+          {notedata.map((item) => (
+            <div
+              className={Styles.div}
+              onClick={() => {
+                handler(item.name);
+              }}
+            >
+              <button className={Styles[item.colour]}>{item.title}</button>
+              {item.name}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

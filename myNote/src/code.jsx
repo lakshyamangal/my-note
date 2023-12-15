@@ -74,3 +74,11 @@ function App() {
 }
 export default App;
 
+{buttons.map((item) => (
+  <button
+    name={item}
+    className={`${styles[item]} ${colr === item ? styles.active : ''}`}
+    onClick={() => handleClick(item)}
+  >
+  </button>
+))}

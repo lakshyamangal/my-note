@@ -65,7 +65,10 @@
 .violet {
   background: #6691ff;
 }
-
+.active {
+  border-width: 3px;
+  border-style: groove;
+}
 .create {
   grid-column: span 2;
   justify-content: flex-end;
@@ -76,4 +79,5 @@
   width: 5rem;
   border-radius: 1rem;
   margin-left: 4rem;
+  color: white;
 }

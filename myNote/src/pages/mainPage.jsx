@@ -3,6 +3,7 @@ import Styles from "/Users/lakshya_mangal/Desktop/cuvette/my-note/myNote/src/com
 import List from "/Users/lakshya_mangal/Desktop/cuvette/my-note/myNote/src/components/list/list.jsx";
 import Defualt from "../components/default/defualt";
 import Popup from "../components/popup/popup";
+import Display from "../components/display/display";
 function MainPage() {
   //overlay variable for visibilty of overlay.
   let [overlay, setOverlay] = useState(false);
@@ -12,6 +13,18 @@ function MainPage() {
   function appear() {
     setOverlay(true);
   }
+
+  //appearence of the display section
+  let [display, setDisplay] = useState(false);
+  function showDisplay() {
+    setDisplay(true);
+  }
+  function hideDisplay() {
+    setDisplay(false);
+  }
+  // which section should be opened
+  let [groupName, setGroupName] = useState("");
+  // storing the array in the state variable
   let [notedata, setNotedata] = useState(() => {
     const storedData = localStorage.getItem("notedata");
     return storedData ? JSON.parse(storedData) : [];
@@ -27,8 +40,19 @@ function MainPage() {
         dissapear={dissapear}
         notedata={notedata}
         setNotedata={setNotedata}
+        showDisplay={showDisplay}
+        groupName={groupName}
+        setGroupName={setGroupName}
       />
-      <Defualt />
+      {display && (
+        <Display
+          hideDisplay={hideDisplay}
+          notedata={notedata}
+          setNotedata={setNotedata}
+          groupName={groupName}
+        />
+      )}
+      {!display && <Defualt />}
       {overlay && (
         <div className={Styles.overlayContainer}>
           <Popup

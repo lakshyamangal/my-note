@@ -1,0 +1,43 @@
+.container {
+  display: grid;
+  grid-template-rows: 1fr 6fr 3fr;
+  color: black;
+  background-color: white;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: #001f8b;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+}
+
+.header button {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  font-weight: 600;
+  color: white;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+.purple {
+  background-color: #b38bfa;
+}
+.pink {
+  background-color: #ff79f2;
+}
+.sky {
+  background-color: #43e6fc;
+}
+.orange {
+  background-color: #f19576;
+}
+.blue {
+  background-color: #0047ff;
+}
+.violet {
+  background-color: #6691ff;
+}

@@ -22,8 +22,9 @@ function Popup(props) {
   }
   //value input from color buttons
   let [colr, setColr] = useState("");
-  function colrHandler(e) {
-    setColr(e.target.name);
+  function colrHandler(item) {
+    setErr(false);
+    setColr(item);
   }
   // props of the original array
   let notedata = props.notedata;
@@ -33,7 +34,13 @@ function Popup(props) {
   let [err, setErr] = useState(false);
   let [errmss, setErrmss] = useState("");
 
-  // function after the submition
+  //find function in array
+  function findGroup(name) {
+    return notedata.some((notebook) => {
+      if (notebook.name === name) return true;
+    });
+  }
+  //function to add to group
   function addToGroup() {
     let groupTitle = "";
     let arr = Array.from(value);
@@ -58,15 +65,26 @@ function Popup(props) {
     } else if (colr == "") {
       setErr(true);
       setErrmss("Select any colour");
+    } else if (!notedata.length) {
+      setNotedata([
+        ...notedata,
+        { title: groupTitle, name: value, colour: colr, arr: [] },
+      ]);
+      dissapear();
+    } else if (findGroup(name)) {
+      setErr(true);
+      setErrmss("Group existing , try other name");
+    } else {
+      setNotedata([
+        ...notedata,
+        { title: groupTitle, name: value, colour: colr, arr: [] },
+      ]);
+      dissapear();
     }
-
-    setNotedata([
-      ...notedata,
-      { title: groupTitle, name: value, colour: colr, arr: [] },
-    ]);
   }
-  console.log(notedata);
 
+  console.log(notedata);
+  const buttons = ["purple", "pink", "sky", "orange", "blue", "violet"];
   return (
     <div className={Styles.container} onClick={clean}>
       <div className={Styles.popup}>
@@ -84,6 +102,7 @@ function Popup(props) {
             onChange={title}
             onClick={() => {
               setErr(false);
+              setColr("");
             }}
           />
         </div>
@@ -91,36 +110,15 @@ function Popup(props) {
           <p>Choose colour</p>
         </div>
         <div className={Styles.button}>
-          <button
-            name="purple"
-            className={Styles.purple}
-            onClick={colrHandler}
-          ></button>
-          <button
-            name="pink"
-            className={Styles.pink}
-            onClick={colrHandler}
-          ></button>
-          <button
-            name="sky"
-            className={Styles.sky}
-            onClick={colrHandler}
-          ></button>
-          <button
-            name="orange"
-            className={Styles.orange}
-            onClick={colrHandler}
-          ></button>
-          <button
-            name="blue"
-            className={Styles.blue}
-            onClick={colrHandler}
-          ></button>
-          <button
-            name="violet"
-            className={Styles.violet}
-            onClick={colrHandler}
-          ></button>
+          {buttons.map((item) => (
+            <button
+              name={item}
+              className={`${Styles[item]} ${
+                colr === item ? Styles.active : ""
+              }`}
+              onClick={() => colrHandler(item)}
+            ></button>
+          ))}
         </div>
         <div className={Styles.create}>
           {err && (

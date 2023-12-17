@@ -3,6 +3,8 @@
   grid-template-rows: 1fr 6fr 3fr;
   color: black;
   background-color: white;
+  width: 80vw;
+  font-family: "Roboto", sans-serif;
 }
 
 .header {
@@ -40,4 +42,56 @@
 }
 .violet {
   background-color: #6691ff;
+}
+
+.notes {
+  background-color: #dae5f5;
+  height: 60vh;
+  width: 80vw;
+}
+.scroll {
+  height: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+.scrollChild {
+  background-color: white;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.child1 p {
+  text-align: left;
+  word-wrap: break-word;
+  padding: 1rem;
+}
+.child2 {
+  height: 2rem;
+}
+.send {
+  position: absolute;
+  bottom: 3rem;
+  right: 2rem;
+}
+
+.input {
+  height: 30vh;
+  width: 80vw;
+  display: grid;
+}
+.textarea {
+  border-width: 1rem;
+  border-style: solid;
+  border-color: #001f8b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.textarea textarea {
+  margin: 1rem;
+  width: 100%;
+  resize: none;
+  overflow-y: scroll;
+  outline: none;
 }

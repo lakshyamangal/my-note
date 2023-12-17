@@ -16,12 +16,7 @@ function List(props) {
     // <div className={Styles.container}>
     <div className={Styles.item1}>
       <div className={Styles.header}>
-        <p>
-          Pocket Notes
-          <button className={Styles.plus} onClick={appear}>
-            <span>+</span>
-          </button>
-        </p>
+        <p>Pocket Notes</p>
       </div>
 
       <div className={Styles.notes}>
@@ -37,6 +32,9 @@ function List(props) {
               {item.name}
             </div>
           ))}
+          <button className={Styles.plus} onClick={appear}>
+            <span>+</span>
+          </button>
         </div>
       </div>
     </div>

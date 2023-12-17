@@ -22,6 +22,13 @@ function MainPage() {
   function hideDisplay() {
     setDisplay(false);
   }
+
+  let [windowWidth, setWindowWidth] = useState(false);
+  function handleClick() {
+    if (window.innerWidth <= 320) setWindowWidth(window.innerWidth <= 320);
+  }
+  window.addEventListener("resize", handleClick);
+
   // which section should be opened
   let [groupName, setGroupName] = useState("");
   // storing the array in the state variable

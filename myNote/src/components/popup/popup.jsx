@@ -49,7 +49,7 @@ function Popup(props) {
         if (index == 0) {
           groupTitle = groupTitle + item;
         } else if (item === " ") {
-          groupTitle = groupTitle + (arr[index + 1] ? arr[index + 1] : NULL);
+          groupTitle = groupTitle + (arr[index + 1] ? arr[index + 1] : "");
           return true;
         }
       });

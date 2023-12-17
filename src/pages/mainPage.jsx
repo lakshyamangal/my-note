@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Styles from "/Users/lakshya_mangal/Desktop/cuvette/my-note/myNote/src/components/main.module.css";
-import List from "/Users/lakshya_mangal/Desktop/cuvette/my-note/myNote/src/components/list/list.jsx";
+import Styles from "../components/main.module.css";
+import List from "../components/list/list.jsx";
 import Defualt from "../components/default/defualt";
 import Popup from "../components/popup/popup";
 import Display from "../components/display/display";

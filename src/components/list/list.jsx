@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "/Users/lakshya_mangal/Desktop/cuvette/my-note/myNote/src/components/list/list.module.css";
+import Styles from "./list.module.css";
 
 function List(props) {
   let appear = props.appear;

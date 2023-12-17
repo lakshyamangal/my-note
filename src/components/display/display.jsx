@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from "react";
-import Styles from "/Users/lakshya_mangal/Desktop/cuvette/my-note/myNote/src/components/display/display.module.css";
+import Styles from "./display.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 

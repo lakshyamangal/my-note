@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTriangleExclamation } from "@fortawesome/free-solid-svg-icons";
-import Styles from "/Users/lakshya_mangal/Desktop/cuvette/my-note/myNote/src/components/popup/popup.module.css";
+import Styles from "./popup.module.css";
 
 function Popup(props) {
   // props regarding overlay

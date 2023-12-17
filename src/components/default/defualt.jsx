@@ -1,8 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
-import poster from "/Users/lakshya_mangal/Desktop/cuvette/my-note/myNote/src/assets/images/poster.png";
-import Styles from "/Users/lakshya_mangal/Desktop/cuvette/my-note/myNote/src/components/default/default.module.css";
+import poster from "../../assets/images/poster.png";
+import Styles from "./default.module.css";
 
 function Defualt() {
   return (
